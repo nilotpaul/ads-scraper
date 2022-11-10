@@ -214,7 +214,7 @@ def jsonToDataFrame(resultDict,listOfKeywords):
     return df
 
 # title 
-st.title(":male-detective: Google Ads Keyword Dasboard")
+st.title(":male-detective: Ady Dasboard")
 
 # specify the number of times each keyword scraping is run
 numberOfTimes = st.slider('How many times do you want this keyword scraping to be run?',1,100,10)
@@ -236,7 +236,7 @@ with col2:
 
 submitted = st.button("Submit")
 if submitted:
-    st.write('Google Ads Scraping for the following eywrods:', str(chosen_keywords),' for ',numberOfTimes, ' times.')
+    st.write('Scraping for the following keywrods:', str(chosen_keywords),' for ',numberOfTimes, ' times.')
 
     resultDict = adScraper(numberOfTimes,chosen_keywords)
     rawOutput = jsonToDataFrame(resultDict,chosen_keywords)
