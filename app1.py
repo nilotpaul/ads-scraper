@@ -20,11 +20,11 @@ def displayScraperResult():
 
     # st.dataframe(groupedKeywordPercentage_df)
     groupedKeywordPercentage_df = generateKeywordAdPercentage(df)
-    # remove rows with zero percentage
+
     groupedKeywordPercentage_df = groupedKeywordPercentage_df[groupedKeywordPercentage_df.Percentage != 0]
 
 
-    # plot bar chart
+    
     bar_chart = px.bar(
         groupedKeywordPercentage_df,
         x="Keyword",
@@ -60,7 +60,6 @@ def displayScraperResult():
             st.bar_chart(new_df)
 
 
-# Generate Keyword Ads Appearance Percentage
 def generateKeywordAdPercentage(df):
     keywordAdPercentage = []
     for keyword in df['Keyword'].unique().tolist():
