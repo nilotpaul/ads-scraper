@@ -212,10 +212,8 @@ def jsonToDataFrame(resultDict,listOfKeywords):
     df = pd.DataFrame(resultList,columns=["Keyword","Company","absolute-top","top","bottom","top(%)","bottom(%)","Keyword Ads Percentage(%)"])
     return df
 
-# title 
 st.title(":male-detective: Ady Dasboard")
 
-# specify the number of times each keyword scraping is run
 numberOfTimes = st.slider('How many times do you want this keyword scraping to be run?',1,100,10)
 listOfKeywords = ["hosting"]
 
